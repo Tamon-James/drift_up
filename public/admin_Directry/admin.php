@@ -1,4 +1,12 @@
 <?php 
+    session_start();
+        if (!isset($_SESSION['user'])) {
+            header("Location: login.php");
+            exit;
+        }
+
+
+
 
     $dsn = 'mysql:host=localhost;dbname=driftinformation;charset=utf8';
     $user = 'root';
@@ -37,17 +45,17 @@
     <head>
         <meta charset="UTF-8">
         <title>ドリフト局公式サイト</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
    
     <body>
         <header>
             <h1><a href="index.php" class="header-logo">ドリフト局</a></h1>
-            <img src="images/drift-logo-clear.png" class="drift-logo">
+            <img src="../images/drift-logo-clear.png" class="drift-logo">
                 
             
-            <a href="https://www.instagram.com/drift_kyoku?igsh=MThqOGI0a2VnM2dreQ%3D%3D&utm_source=qr"><img src="images/insta-icon.png" class="sns-icon"></a>
-            <a gref="#"><img src="images/twitter-icon.png" class="sns-icon"></a>
+            <a href="https://www.instagram.com/drift_kyoku?igsh=MThqOGI0a2VnM2dreQ%3D%3D&utm_source=qr"><img src="../images/insta-icon.png" class="sns-icon"></a>
+            <a gref="#"><img src="../images/twitter-icon.png" class="sns-icon"></a>
         </header>
 
         <div class="main">
