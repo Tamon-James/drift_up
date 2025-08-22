@@ -12,32 +12,8 @@
     $user = 'root';
     $password = '';
 
-    require_once __DIR__ . '/../db/db_connect.php';
+    require_once __DIR__ . '/../../db/db_connect.php';
 
-
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $type = $_POST['kind-of-admin'] ?? '';
-    $title = $_POST['report-title'] ?? '';
-    $content = $_POST['report-text'] ?? '';
-
-    if ($type === '未選択' || empty($title) || empty($content)) {
-        echo "入力内容に不備があります。";
-    } else {
-        $date = date("Y-m-d");
-        $sql = "INSERT INTO posts (type, title, content, created_at) VALUES (:type, :title, :content, :created_at)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':type', $type);
-        $stmt->bindParam(':title', $title);
-        $stmt->bindParam(':content', $content);
-        $stmt->bindParam(':created_at', $date);
-
-        if ($stmt->execute()) {
-            echo "投稿完了しました！";
-        } else {
-            echo "投稿失敗しました。";
-        }
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -50,8 +26,8 @@
    
     <body>
         <header>
-            <h1><a href="index.php" class="header-logo">ドリフト局</a></h1>
-            <img src="../images/drift-logo-clear.png" class="drift-logo">
+            <h1><a href="/../index.php" class="header-logo">ドリフト局</a></h1>
+            <img src="/../images/drift-logo-clear.png" class="drift-logo">
                 
             
             <a href="https://www.instagram.com/drift_kyoku?igsh=MThqOGI0a2VnM2dreQ%3D%3D&utm_source=qr"><img src="../images/insta-icon.png" class="sns-icon"></a>
@@ -59,7 +35,7 @@
         </header>
 
         <div class="main">
-            <form action="admin.php" method="post">
+            <form action="confirm.php" method="post">
                <div class="admin-item">投稿場所選択→
                   <select name="kind-of-admin" class="admin-select">
                      <option value="未選択">選択してください</option>
@@ -77,7 +53,7 @@
 
                 <br> 写真ボックス作成予定（※今後）
 
-                 <input type="submit" value="送信" class="send-button">
+                 <input type="submit" value="確認" class="send-button">
             </form>
        </div>
 
