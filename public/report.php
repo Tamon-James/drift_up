@@ -7,7 +7,8 @@ require_once __DIR__ . '/../db/db_connect.php';
     <head>
         <meta charset="UTF-8">
         <title>ドリフト局公式サイト</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/report.css">
     </head>
     
     <body>

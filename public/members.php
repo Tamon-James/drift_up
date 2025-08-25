@@ -4,7 +4,8 @@
         <!-- <mate charset="UTF-8"> -->
         <meta charset="UTF-8">
         <title>ドリフト局公式サイト</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/members.css">
     </head>
 
     <body>

@@ -7,7 +7,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 
 if ($type === '' || $id === 0) {
-    http_response_code(400); 
+    http_response_code(response_code: 400); 
     exit('不正なパラメータです。');
 }
 
@@ -23,7 +23,8 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>ドリフト局公式サイト</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/show.css">
 </head>
 
 <body>

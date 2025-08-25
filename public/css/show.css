@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.atama{
+    display: flex;
+}
+
+.show-date{
+    font-size:20px;
+    position:absolute;
+    right:0;
+    margin-right:8%;
+    margin-top:75px;
+}
+
+.back{
+    color:white;
+    font-size:40px;
+}
+
+.show-title{
+    color:white;
+    font-size:30px;
+
+}
+
+.show-text{
+    background-color: rgba(0,0,0,0.4);
+    color:white;
+    flex-wrap:wrap;
+    max-width:1000px;
+    overflow:hidden;
+    height:150px;
+    margin:0 auto;
+    margin-top:20px;
+    border-radius:6px;
+}
