@@ -12,14 +12,12 @@
         <h1><a href="index.php" class="header-logo">ドリフト局</a></h1>
         <img src="images/drift-logo-clear.png" class="drift-logo">
 
-        <!-- ハンバーガー -->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
-        <!-- メニュー -->
         <nav class="header-list">
             <ul class="menu-group" id="menu">
                 <li><a class="menu-item" href="news.php">NEWS</a></li>
@@ -30,15 +28,22 @@
             </ul>
         </nav>
 
-        <!-- SNS -->
         <a href="https://www.instagram.com/drift_kyoku"><img src="images/insta-icon.png" class="sns-icon"></a>
         <a href="#"><img src="images/twitter-icon.png" class="sns-icon"></a>
     </header>
 
     <div class="main">
-        <!-- コンテンツ -->
+        
     </div>
 
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.header-list');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+    </script>
     <script src="footer.js"></script>
 </body>
 </html>

@@ -54,7 +54,6 @@ header{
 .menu-item-now{
     color:black;
     list-style:none;
-    display:inline-block;
     padding:10px;
     text-decoration:underline;
     text-decoration-color:gray;
@@ -84,6 +83,8 @@ header{
     cursor: pointer;
     gap: 5px;
     width: 30px;
+    margin-left: auto;
+    padding-right: 10px;
 }
 
 .hamburger span{
@@ -92,7 +93,13 @@ header{
     border-radius: 2px;
 }
 
+header a{
+    text-decoration: none;
+}
 
+header li{
+    list-style: none;
+}
 
 /* Footer */
 .footer{
@@ -118,10 +125,11 @@ header{
   .header-list {
     display: none;
     position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    background-color: white;
+    top: 110px;
+    width: 150px;
+    right: 10px;
+    padding: 10px;
+    background-color: rgba(44, 44, 44, 0.9);
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     z-index: 1000;
     
@@ -129,16 +137,33 @@ header{
 
   .hamburger {
     display: flex; 
-    z-index: 1001; 
+    z-index: 1001;
+
   }
 
   .header-list.active {
-    display: flex; 
+    display: flex;
   }
 
   .sns-icon {
     display: none;
   }
+  
+  .menu-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-item,
+  .menu-item-now {
+    color: white;
+  }
+
+  .menu-item:visited,
+  .menu-item-now:visited {
+    color: white;
+}
+
 }
 
 @media all and (max-width: 480px) {

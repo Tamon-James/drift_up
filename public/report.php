@@ -6,6 +6,7 @@ require_once __DIR__ . '/../db/db_connect.php';
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ドリフト局公式サイト</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/report.css">
@@ -15,6 +16,13 @@ require_once __DIR__ . '/../db/db_connect.php';
         <header>
             <h1 class="header-logo"><a href="index.php">ドリフト局</a></h1>
             <img src="images/drift-logo-clear.png" class="drift-logo">
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav class="header-list">
                 <ul class="menu-group">
                     <li><a class="menu-item" href="news.php">NEWS</a></li>
@@ -67,6 +75,14 @@ require_once __DIR__ . '/../db/db_connect.php';
 
         </div>
 
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.header-list');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+    </script>
         <script src="footer.js"></script>
 
     </body>

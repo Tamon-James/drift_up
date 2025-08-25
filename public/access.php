@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ドリフト局公式サイト</title>
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/access.css">
@@ -11,6 +12,13 @@
         <header>
             <h1><a href="index.php" class="header-logo">ドリフト局</a></h1>
             <img src="images/drift-logo-clear.png" class="drift-logo">
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav class="header-list">
                 <ul class="menu-group">
                     <li><a class="menu-item" href="news.php">NEWS</a></li>
@@ -38,7 +46,15 @@
 
         </div>
 
-        <script src="footer.js"></script>
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.header-list');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+    </script>
+    <script src="footer.js"></script>
 
     </body>
 
