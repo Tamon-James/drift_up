@@ -121,7 +121,7 @@ header li{
 
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 950px) {
   .header-list {
     display: none;
     position: absolute;
@@ -167,5 +167,9 @@ header li{
 }
 
 @media all and (max-width: 480px) {
+
+    .header-logo{
+        font-size: 25px;
+    }
 
 }

@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../db/db_connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -46,8 +51,31 @@
             <h1 class="page-title">NEWS</h1>
             <hr>
 
+        <?php
+            $sql = "SELECT * FROM posts WHERE type = 'news' ORDER BY id DESC";
+            $stmt = $pdo->query($sql);
+
+            foreach ($stmt as $row) {
+                 $id = htmlspecialchars($row['id']);
+                 $title = htmlspecialchars($row['title']);
+
+                 $date = date('Y.m.d', strtotime($row['created_at'])); 
 
 
+                 echo '<a href="common/show.php?type=report&id=' . $id . '" class="report-link">';
+                 echo    '<div class="report-box">
+                            <div class="report-samune">
+                                <img src="images/drift-logo-color.jpg">
+                            </div>
+                            <div class="report-box-text">
+                            <div class="report-box-title">' . $title . '</div>
+                        <div class="report-data">' . $date . '</div>
+                         </div>
+                     </div>';
+                 echo '</a>';
+            }
+            
+        ?>
 
 
 

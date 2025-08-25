@@ -48,7 +48,7 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
                 <p>ページが見つかりません。</p>
             <?php endif; ?>
         </div>
-        <a class="back" href="../report.php">back</a>
+        <a class="back" href="../<?= htmlspecialchars($type) ?>.php">back</a>
     </div>
 </body>
 </html>

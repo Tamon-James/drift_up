@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ドリフト局公式サイト</title>
-        <link rel="stylesheet" href="css/common.css">
-        <link rel="stylesheet" href="css/members.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/members.css">
     </head>
 
     <body>
@@ -37,7 +37,7 @@
             <hr>
 
             <!--1stMember-->
-            <div class="member-list anim-box slidein is-animated">
+            <div class="member-list">
                 <div class="member-photo">
                     <img src="images/shunta-face2.jpg" alt="しゅんた 顔" class="face">
                 </div>  
@@ -52,12 +52,12 @@
             </div>
 
             <!--2ndMember-->
-            <div class="member-list anim-box slidein is-animated">
+            <div class="member-list">
                 <div class="member-photo">
                     <img src="images/towa-face.jpg" alt="とわ 顔" class="face">
                 </div>
                 <div class="member-info">
-                    <div class=""member-info-right>
+                    <div class="member-info-right">
                          <div class="role">脱糞担当</div>
                          <h2><strong>宮島 飛和</strong><br class="id">A12313＊</h2>
                     </div>
@@ -67,12 +67,12 @@
             </div>
 
             <!--3rdMember-->
-            <div class="member-list anim-box slidein is-animated">
+            <div class="member-list">
                 <div class="member-photo">
                     <img src="images/tamon-face.jpg" alt="多聞 顔" class="face">
                 </div>
                 <div class="member-info">
-                    <div class=""member-info-right>
+                    <div class="member-info-right">
                          <div class="role">生活保護担当</div>
                          <h2><strong>二宮 多聞</strong><br class="id">J02324＊</h2>
                     </div>
@@ -82,12 +82,12 @@
             </div>
 
             <!--4thMember-->
-            <div class="member-list anim-box slidein is-animated">
+            <div class="member-list">
                 <div class="member-photo">
                     <img src="images/ishi-face.jpg" alt="いし 顔" class="face">
                 </div>
                 <div class="member-info">
-                    <div class=""member-info-right>
+                    <div class="member-info-right">
                          <div class="role">詐欺対策統括</div>
                          <h2><strong>石塚 智也</strong><br class="id">JX2302＊</h2>
                     </div>

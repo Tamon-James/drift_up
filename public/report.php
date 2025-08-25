@@ -14,7 +14,7 @@ require_once __DIR__ . '/../db/db_connect.php';
     
     <body>
         <header>
-            <h1 class="header-logo"><a href="index.php">ドリフト局</a></h1>
+            <h1><a href="index.php" class="header-logo">ドリフト局</a></h1>
             <img src="images/drift-logo-clear.png" class="drift-logo">
 
             <div class="hamburger" id="hamburger">
@@ -36,14 +36,12 @@ require_once __DIR__ . '/../db/db_connect.php';
             <a gref="#"><img src="images/twitter-icon.png" class="sns-icon"></a>
         </header>
 
-
-<!--test2 -->
         <div class="main">
 
             <h1 class="page-title">REPORT</h1>
             <hr>
 
-            <?php
+        <?php
             $sql = "SELECT * FROM posts WHERE type = 'report' ORDER BY id DESC";
             $stmt = $pdo->query($sql);
 
@@ -67,12 +65,7 @@ require_once __DIR__ . '/../db/db_connect.php';
                  echo '</a>';
             }
             
-?>
-
-
-<!--test2-->
-
-
+        ?>
         </div>
 
     <script>

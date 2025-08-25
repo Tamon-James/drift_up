@@ -5,6 +5,7 @@
     display:flex;
     color:black;
     flex-wrap:wrap;
+    width: 90%;
     max-width:1000px;
     overflow:hidden;
     height:150px;
@@ -48,6 +49,11 @@
     font-size:25px;
     margin-bottom:10px;
     text-align:left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
 }
 
 .report-data {
@@ -56,4 +62,36 @@
     bottom: 0;
     right: 0;
     margin-right:11px;
+}
+
+@media all and (max-width: 768px) {
+
+}
+
+@media all and (max-width: 480px) {
+.report-box{
+    width: 90%;
+    height:135px;
+    margin:0 auto;
+    margin-top:20px;
+    border-radius:6px;
+}
+
+.report-samune{
+    width:180px;
+    height:135px;
+    overflow:hidden;
+    flex-shrink:0;
+    max-width: 30%;
+}
+
+.report-box-title{
+    font-size:20px;
+
+}
+
+.report-data {
+    font-size: 14px;
+}
+
 }
