@@ -1,6 +1,22 @@
 <?php
 require_once __DIR__ . '/../db/db_connect.php';
 
+$limit = 10; // 1ページあたりの件数
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+if ($page < 1) { $page = 1; }
+$offset = ($page - 1) * $limit;
+
+$sql = "SELECT * FROM posts WHERE type = 'news' ORDER BY id DESC LIMIT :limit OFFSET :offset";
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+$stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
+$news = $stmt->fetchAll();
+
+
+$count_sql = "SELECT COUNT(*) FROM posts WHERE type = 'news'";
+$total = $pdo->query($count_sql)->fetchColumn();
+$total_pages = ceil($total / $limit);
 ?>
 
 <!DOCTYPE html>
@@ -51,34 +67,39 @@ require_once __DIR__ . '/../db/db_connect.php';
             <h1 class="page-title">NEWS</h1>
             <hr>
 
-        <?php
-            $sql = "SELECT * FROM posts WHERE type = 'news' ORDER BY id DESC";
-            $stmt = $pdo->query($sql);
+            <?php
+            foreach ($news as $row) {
+                    $id = htmlspecialchars($row['id']);
+                    $title = htmlspecialchars($row['title']);
+                    $date = date('Y.m.d', strtotime($row['created_at']));
 
-            foreach ($stmt as $row) {
-                 $id = htmlspecialchars($row['id']);
-                 $title = htmlspecialchars($row['title']);
+                    echo '<a href="common/show.php?type=news&id=' . $id . '" class="news-link">';
+                    echo    '<div class="news-box">
+                            <div class="news-samune">' . $date . '</div>
+                            <div class="news-box-text">
+                            <div class="news-box-title">' . $title . '</div>
+                        </div>
+                    </div>';
+                    echo '</a>';
+                }
+            ?>
+            <div class="pagination">
+                <?php if ($page > 1): ?>
+                    <a href="?page=<?= $page-1 ?>">前へ</a>
+                <?php endif; ?>
 
-                 $date = date('Y.m.d', strtotime($row['created_at'])); 
+                <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                    <?php if ($i == $page): ?>
+                        <span class="current"><?= $i ?></span>
+                    <?php else: ?>
+                        <a href="?page=<?= $i ?>"><?= $i ?></a>
+                    <?php endif; ?>
+                <?php endfor; ?>
 
-
-                 echo '<a href="common/show.php?type=report&id=' . $id . '" class="report-link">';
-                 echo    '<div class="report-box">
-                            <div class="report-samune">
-                                <img src="images/drift-logo-color.jpg">
-                            </div>
-                            <div class="report-box-text">
-                            <div class="report-box-title">' . $title . '</div>
-                        <div class="report-data">' . $date . '</div>
-                         </div>
-                     </div>';
-                 echo '</a>';
-            }
-            
-        ?>
-
-
-
+                <?php if ($page < $total_pages): ?>
+                    <a href="?page=<?= $page+1 ?>">次へ</a>
+                <?php endif; ?>
+            </div>
         </div>
 
 

@@ -35,7 +35,7 @@
         <div class="main">
             <h1 class="page-title">PHOTO</h1>
             <hr>
-
+        <h1>coming soon</h1>
 
         </div>
     <script>
