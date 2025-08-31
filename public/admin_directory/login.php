@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // test
     if ($username === 'admin' && $password === 'admin') {
         $_SESSION['user'] = $username;
-        header("Location: admin.php");
+        header("Location: /admin_directory/admin.php");
         exit;
     } else {
         $error = "ログイン失敗：ユーザー名またはパスワードが違います。";

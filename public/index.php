@@ -36,14 +36,7 @@
         
     </div>
 
-    <script>
-    const hamburger = document.querySelector('.hamburger');
-    const menu = document.querySelector('.header-list');
-
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-    </script>
-    <script src="footer.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>

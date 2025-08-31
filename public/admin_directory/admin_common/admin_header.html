@@ -1,0 +1,51 @@
+    <header>
+        <a href="/index.php" class="to_top">トップへ戻る</a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="header-list">
+            <ul class="menu-group" id="menu">
+                <li><a class="menu-item" href="/admin_directory/admin.php">admin top</a></li>
+                <li><a class="menu-item" href="/admin_directory/edit/edit_select.php">edit</a></li>
+                <li><a class="menu-item" href="/admin_directory/new/new_post.php">new</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        let isDirty = false;
+
+        //入力時のフラグ処理
+        document.addEventListener("input", function(e){
+            if(e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA"){
+                isDirty = true;
+            }
+        });
+
+        //フォーム送信でフラグリセット
+        document.addEventListener("submit",function(){
+            isDirty = false;
+        })
+
+        //ページ離脱時の確認
+        window.addEventListener("beforeunload",function(e){
+            if(isDirty){
+                e.preventDefault();
+                e.returnValue = "変更内容が保存されていません。本当に移動しますか？";
+            }
+        });
+
+        document.querySelectorAll("a.menu-item, a.to_top").forEach(link => {
+            link.addEventListener("click", function(e){
+                if(isDirty){
+                    const ok = confirm("変更内容が保存されていません。本当に移動しますか？");
+                    if(!ok){
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+        </script>

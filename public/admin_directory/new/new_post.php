@@ -1,18 +1,14 @@
-<?php 
+<?php
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
-        if (!isset($_SESSION['user'])) {
-            header("Location: login.php");
-            exit;
-        }
-
-
+}
 
 
     $dsn = 'mysql:host=localhost;dbname=driftinformation;charset=utf8';
     $user = 'root';
     $password = '';
 
-    require_once __DIR__ . '/../../db/db_connect.php';
+    require_once __DIR__ . '/../../../db/db_connect.php';
 
 ?>
 
@@ -22,19 +18,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ドリフト局公式サイト</title>
-        <link rel="stylesheet" href="../css/common.css">
-        <link rel="stylesheet" href="../css/admin.css">
+        <link rel="stylesheet" href="../../css/common.css">
+        <link rel="stylesheet" href="../admin_css/new_post.css">
     </head>
    
     <body>
-        <header>
-            <h1><a href="/../index.php" class="header-logo">ドリフト局</a></h1>
-            <img src="/../images/drift-logo-clear.png" class="drift-logo">
-                
-            
-            <a href="https://www.instagram.com/drift_kyoku?igsh=MThqOGI0a2VnM2dreQ%3D%3D&utm_source=qr"><img src="../images/insta-icon.png" class="sns-icon"></a>
-            <a gref="#"><img src="../images/twitter-icon.png" class="sns-icon"></a>
-        </header>
+<?php    require_once __DIR__ . '/../admin_common/admin_header.html';    ?>
 
         <div class="main">
             <form action="confirm.php" method="post">

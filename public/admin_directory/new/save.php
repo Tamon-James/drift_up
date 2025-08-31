@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require_once __DIR__ . '/../../db/db_connect.php';
+require_once __DIR__ . '/../../../db/db_connect.php';
 
 $type = $_POST['kind-of-admin'] ?? '';
 $title = $_POST['report-title'] ?? '';
@@ -25,4 +25,4 @@ $stmt->execute([
     ':created_at' => $date
 ]);
 
-echo "投稿完了しました！ <a href='admin.php'>戻る</a>";
+echo "投稿完了しました！ <a href='../admin.php'>戻る</a>";
