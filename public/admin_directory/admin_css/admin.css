@@ -26,3 +26,17 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
     
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 20px;
+}
