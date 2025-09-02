@@ -19,7 +19,7 @@ if (!isset($_SESSION['user'])) {
     <h1>管理ページ</h1>
     <div class="menu">
         <a href="new/new_post.php" class="menu-btn">新規投稿</a>
-        <a href="edit/edit_select.php" class="menu-btn">投稿編集</a>
+        <a href="edit/edit_list.php" class="menu-btn">投稿編集</a>
     </div>
 
     <script src="/js/hamburger.js"></script>

@@ -96,7 +96,6 @@ $total_pages = ceil($total / $limit);
             </div>
         </div>
         <script src="js/hamburger.js"></script>
-        <script src="js/footer.js"></script>
 
     </body>
 </html>
