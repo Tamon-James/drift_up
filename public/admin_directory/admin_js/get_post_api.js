@@ -15,7 +15,7 @@ document.getElementById('select-btn').addEventListener('click', function() {
                 div.innerHTML = `<strong>${post.title}</strong> 
                                  <span class="date">(${post.year}${post.month_day})</span>`;
                 div.addEventListener('click', () => {
-                    window.location.href = `/admin_directory/edit_detail.php?id=${post.id}`;
+                    window.location.href = `/admin_directory/edit/edit_post.php?id=${post.id}`;
                 });
                 list.appendChild(div);
             });

@@ -20,6 +20,10 @@
     margin-left: 20px;
 }
 
+.post-list {
+    margin-bottom: 80px;
+}
+
 .post-item {
     color: white;
     padding: 12px 16px;
