@@ -34,9 +34,19 @@
     flex-shrink:0;
     background-color: black;
     color: white;
-    font-size: 20px;
 }
 
+.year{
+    font-size:25px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.month-day{
+    font-size:45px;
+    text-align:center;
+    margin-top:5px;
+}
 
 .news-box-text{
     flex:1;
@@ -102,6 +112,14 @@
     overflow:hidden;
     flex-shrink:0;
     max-width: 30%;
+}
+
+.year{
+    font-size:20px;
+}
+
+.month-day{
+    font-size:30px;
 }
 
 .news-box-title{

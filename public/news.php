@@ -71,11 +71,13 @@ $total_pages = ceil($total / $limit);
             foreach ($news as $row) {
                     $id = htmlspecialchars($row['id']);
                     $title = htmlspecialchars($row['title']);
-                    $date = date('Y.m.d', strtotime($row['created_at']));
+                    $timestamp = strtotime($row['created_at']);
+                    $year = date('Y', $timestamp);
+                    $month_day = date('m/d', $timestamp);
 
                     echo '<a href="common/show.php?type=news&id=' . $id . '" class="news-link">';
                     echo    '<div class="news-box">
-                            <div class="news-samune">' . $date . '</div>
+                            <div class="news-samune"> <div class="year">' . $year . '</div> <div class="month-day">' . $month_day . '</div></div>
                             <div class="news-box-text">
                             <div class="news-box-title">' . $title . '</div>
                         </div>
