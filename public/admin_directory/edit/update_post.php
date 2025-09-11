@@ -23,7 +23,7 @@ $stmt->execute([
     ':id' => $id,
     ':title' => $title,
     ':content' => $content,
-    ':created_at' => $date
+    ':created_at' => $created_at
 ]);
 
 echo "編集が完了しました！ <a href='../admin.php'>戻る</a>";

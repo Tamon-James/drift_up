@@ -32,7 +32,7 @@ $safe_created_at = htmlspecialchars($created_at, ENT_QUOTES, 'UTF-8');
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <input type="hidden" name="title" value="<?php echo $safe_title; ?>">
         <input type="hidden" name="content" value="<?php echo htmlspecialchars($content, ENT_QUOTES, 'UTF-8'); ?>">
-        <input type="hidden" name="created_at" value="<?php echo $safe_created_at; ?>">
+        <input type="hidden" name="created_at" value="<?php echo htmlspecialchars($safe_created_at, ENT_QUOTES, 'UTF-8'); ?>">
 
         <div>
             <strong>タイトル：</strong><br>
