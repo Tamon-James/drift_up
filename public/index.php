@@ -42,6 +42,7 @@ require_once __DIR__ . '/../db/db_connect.php';
                 <div class="slide"><img src="images/slide-img1.png" alt="Slide 1"></div>
                 <div class="slide"><img src="images/slide-img2.png" alt="Slide 2"></div>
                 <div class="slide"><img src="images/slide-img3.png" alt="Slide 3"></div>
+                <div class="slide"><img src="images/slide-img4.png" alt="Slide 4"></div>
             </div>
             <div class="prev-slide"><</div>
             <div class="next-slide">></div>
