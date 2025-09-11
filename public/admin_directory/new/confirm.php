@@ -26,7 +26,7 @@ $content = $_POST['report-text'] ?? '';
         <input type="hidden" name="report-text" value="<?= htmlspecialchars($content) ?>">
         <input type="submit" value="投稿する">
     </form>
-    <form action="admin.php" method="post">
+    <form action="new_post.php" method="post">
         <input type="hidden" name="kind-of-admin" value="<?= htmlspecialchars($type) ?>">
         <input type="hidden" name="report-title" value="<?= htmlspecialchars($title) ?>">
         <input type="hidden" name="report-text" value="<?= htmlspecialchars($content) ?>">

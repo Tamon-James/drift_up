@@ -53,8 +53,11 @@ $safe_created_at = htmlspecialchars($created_at, ENT_QUOTES, 'UTF-8');
         <button type="submit">この内容で保存する</button>
     </form>
 
-    <form action="edit_post.php" method="get" style="margin-top:10px;">
+    <form action="edit_post.php" method="post" style="margin-top:10px;">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <input type="hidden" name="title" value="<?php echo $safe_title; ?>">
+        <input type="hidden" name="content" value="<?php echo htmlspecialchars($content) ?>">
+        <input type="hidden" name="created_at" value="<?php echo htmlspecialchars($safe_created_at) ?>">
         <button type="submit">戻って修正する</button>
     </form>
 </body>
