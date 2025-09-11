@@ -38,11 +38,13 @@ require_once __DIR__ . '/../db/db_connect.php';
 
     <div class="main">
         <div class="slider">
-            <div class="slides"> <!-- img-size = 1200*400 -->
-                <div class="slide"><img src="images/drift-logo-color.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="images/drift-logo-color.jpg" alt="Slide 2"></div>
+            <div class="slides"> <!-- img-size = 1024*550 -->
+                <div class="slide"><img src="images/slide-img1.png" alt="Slide 1"></div>
+                <div class="slide"><img src="images/slide-img2.png" alt="Slide 2"></div>
                 <div class="slide"><img src="images/drift-logo-color.jpg" alt="Slide 3"></div>
             </div>
+            <div class="prev-slide"><</div>
+            <div class="next-slide">></div>
             <div class="slider-pagination"></div>
         </div>
     
