@@ -65,8 +65,13 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         <br>
         <button type="submit">確認画面へ</button><br><br>
         <button type="button" onclick="window.location.href='edit_list.php'">投稿一覧へ戻る</button><br><br>
-        <button type="button" onclick="if(confirm('本当に削除しますか？')){window.location.href='delete_post.php?id=<?php echo $post['id']; ?>';}">投稿削除</button>
-
     </form>
+
+    <form action="delete_post.php" method="post" onsubmit="return confirm('[<?= htmlspecialchars($title, ENT_QUOTES) ?>]を本当に削除しますか？削除された場合、復元できません。');">
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($id, ENT_QUOTES); ?>">
+            <button type="submit">投稿削除</button>
+    </form>
+
+    
 </body>
 </html>
