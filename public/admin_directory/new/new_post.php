@@ -35,10 +35,23 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
 
                <div class="admin-item">タイトル</div>
-                 <input type="text" name="report-title" class="admin-title" value="<?=htmlspecialchars($title) ?>">
+                 <input type="text" name="report-title" class="admin-title" placeholder="タイトルを入力してください" value="<?=htmlspecialchars($title) ?>">
 
                 <div class="admin-item">内容</div>
-                     <textarea name="report-text" class="admin-text"><?=htmlspecialchars($content) ?></textarea>
+                <div id="container" class="container">
+                    <textarea name="report-text" class="admin-text" id="inputText" placeholder="ここに文章を入力してください"><?=htmlspecialchars($content) ?></textarea>
+                    <div id="previewContainer">
+                        <div id="preview"></div>
+                    </div>
+                </div>
+                <button type="button" id="togglePreview">プレビュー表示</button>
+
+                <div id="tooltip" class="tooltip">
+                    <p id="reason"></p>
+                    <p><b>正しい文章</b><span id="correct"></span></p>
+                    <button type="button" id="replaceBtn">置き換える</button>
+                    <button type="button" id="ignoreBtn">無視する</button>
+                </div>
 
                 <br> 写真ボックス作成予定（※今後）
 
@@ -50,8 +63,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
         </div>
 
-        <script src="footer.js"></script>
-
+        <script src="/admin_directory/admin_js/check.js"></script>
     </body>
 
 </html>
