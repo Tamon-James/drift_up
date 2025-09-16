@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>投稿内容編集</title>
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/admin_directory/css/style.css">
+    <link rel="stylesheet" href="/admin_directory/admin_css/edit_post.css">
 </head>
 <body>
 <?php    require_once __DIR__ . '/../admin_common/admin_header.html';    ?>
@@ -63,13 +63,13 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <input type="date" id="created_at" name="created_at" value="<?php echo date('Y-m-d', strtotime($created_at)); ?>" required>
         </div>
         <br>
-        <button type="submit">確認画面へ</button><br><br>
-        <button type="button" onclick="window.location.href='edit_list.php'">投稿一覧へ戻る</button><br><br>
+        <button type="submit" class="toConfirm">確認画面へ</button><br><br>
+        <button type="button" onclick="window.location.href='edit_list.php'" class="toBack">投稿一覧へ戻る</button><br><br>
     </form>
 
     <form action="delete_post.php" method="post" onsubmit="return confirm('[<?= htmlspecialchars($title, ENT_QUOTES) ?>]を本当に削除しますか？削除された場合、復元できません。');">
             <input type="hidden" name="id" value="<?php echo htmlspecialchars($id, ENT_QUOTES); ?>">
-            <button type="submit">投稿削除</button>
+            <button type="submit" class="deleteBtn">投稿削除</button>
     </form>
 
     

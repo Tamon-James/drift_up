@@ -42,3 +42,41 @@
     color: #999;
     margin-bottom: 4px;
 }
+
+.toConfirm {
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    border: 1px solid green;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+    background-color: green;
+}
+
+.toBack {
+    display: block;
+    width: 100px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+    background-color: gray;
+}
+
+.deleteBtn {
+    display: block;
+    width: 100px;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}

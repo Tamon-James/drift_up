@@ -44,7 +44,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <div id="preview"></div>
                     </div>
                 </div>
-                <button type="button" id="togglePreview">プレビュー表示</button>
+                <button type="button" id="togglePreview">誤字検出表示</button>
 
                 <div id="tooltip" class="tooltip">
                     <p id="reason"></p>
