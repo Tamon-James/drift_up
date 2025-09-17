@@ -4,6 +4,10 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+strong {
+    font-size: 25px;
+}
+
 .type-select-dropdown {
     margin-left: 10px;
     height: 30px;
@@ -79,4 +83,21 @@
     color: white;
     background-color: red;
     cursor: pointer;
+}
+
+.confirm_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.confirm_content {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 50%;
 }
